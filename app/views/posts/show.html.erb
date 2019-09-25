@@ -1,0 +1,9 @@
+<% unless @posts.empty? %>
+  <% @posts.each do |post| %>
+        <p> <strong>Author:</strong><%= current_user.username %><br></p>
+        <strong> Posted: </strong><%= post.description %>
+        <%= time_ago_in_words(post.created_at) %> ago.
+    <% end %>
+
+<% end %>%>
+    

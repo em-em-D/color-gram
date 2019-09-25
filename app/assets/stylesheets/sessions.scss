@@ -1,0 +1,196 @@
+
+ #login{
+    width: 1285px;
+    height: 812px;
+    position: relative;
+    background-color: #1B0329;
+    font-family: 'Rock Salt', cursive;
+ }
+
+ #rec3{
+    position: absolute;
+    width: 455px;
+    height: 106px;
+    left: 445px;
+    top: 258px;
+    background: #06F164;
+    border-radius: 138.5px;
+ }
+ .login-button{
+    position: absolute;
+    width: 95px;
+    height: 100px;
+    left: 600px;
+    top: 405px;
+    background: rgba(6, 241, 100, 0.81);
+    border-radius: 89.5px;
+    color: #F8F3F3;
+   }
+
+   .button {
+      background: red; 
+      color: white;
+      padding: 3px;
+      border-radius: 5px;
+      border: 1px solid black;
+   }
+
+ #p1{
+    position: absolute;
+    width: 43px;
+    height: 165px;
+    left: 450px;
+    top: 150px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    color: #F45F0B;
+ }
+
+ #p2{
+    position: absolute;
+    width: 13px;
+    height: 50px;
+    left: 550px;
+    top: 134px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    color: #6BA71E;
+ }
+
+ #p3{
+    position: absolute;
+    width: 57px;
+    height: 133px;
+    left: 625px;
+    top: 102px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 115px;
+    color: #0ED9B4;
+    backdrop-filter: blur(4px);
+ }
+
+ #p4{
+    position: absolute;
+    width: 52px;
+    height: 115px;
+    left: 700px;
+    top: 133px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    /* identical to box height */
+    color: #8B00A1;
+    
+ }
+
+ #p5{
+    position: absolute;
+    width: 42px;
+    height: 115px;
+    left: 800px;
+    top: 143px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    /* identical to box height */
+    color:#FC0505;
+ }
+
+ #p6{
+    position: absolute;
+    width: 43px;
+    height: 151.49px;
+    left: 470px;
+    top: 450px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    color: #FBFBFB;
+    transform: rotate(18.63deg);
+ }
+
+ #p7{
+    position: absolute;
+    width: 44px;
+    height: 115px;
+    left: 590px;
+    top: 550px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    /* identical to box height */
+    color: #EEF20F;
+    transform: rotate(10.72deg);
+ }
+
+ #p8{
+    position: absolute;
+    width: 31px;
+    height: 121.82px;
+    left: 700px;
+    top: 550.81px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    color: #4DF312;
+    transform: rotate(-14.82deg);
+    }
+
+ #p9{
+    position: absolute;
+    width: 31px;
+    height: 115px;
+    left: 800px;
+    top: 450.81px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 115px;
+    /* identical to box height */
+    color: #FB0599;
+    transform: rotate(-20.41deg);
+    }
+ #user{
+    position: absolute;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    left: 25px;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgb(1, 2, 2);
+ }
+
+ #check{
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 31px;
+    /* identical to box height */
+    color: #FFF9F9;
+ }
+ 
