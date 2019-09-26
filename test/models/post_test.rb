@@ -1,7 +1,10 @@
-require 'test_helper'
+# frozen_string_literal: true
 
+require 'test_helper'
+# :nodoc:
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'should not save post without description' do
+    post = Post.new
+    assert post.save, 'saved post with description'
+  end
 end

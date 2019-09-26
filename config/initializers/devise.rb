@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# :nodoc:
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -8,24 +9,23 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '7e9e4ff66dbff7554d723741e3159b6053ddcbd572a6e3b853d0267054c4cb67ac7b1fd07c14ec0218b863d5f8fa38a34b308b604b9121796be8c08130213481'
+  # config.secret_key
+  # = '7e9e4ff66dbff7554d723741e3159b6053ddcbd572
+  # a6e3b853d0267054c4cb67ac7b1fd07c14ec0218b863d5f8
+  # fa38a34b308b604b9121796be8c08130213481'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
-
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
-
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
-
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
@@ -114,14 +114,13 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'beab5d7378d03ba29d1bb07a9e2fd5391b225f04283edb81422be8bdd3c5c3b7fa1f7ee1aacd81859e25808fa0ab697eee869f224e6c0767390e06068623dbbc'
-
+  # config.pepper = 'beab5d7378d03ba29d1bb07a9e2fd5391b225f
+  # 04283edb81422be8bdd3c5c3b7fa1f7ee1aacd81859e25808fa0ab6
+  # 97eee869f224e6c0767390e06068623dbbc'
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
-
   # Send a notification email when the user's password is changed.
   # config.send_password_change_notification = false
-
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
   # confirming their account. For instance, if set to 2.days, the user will be

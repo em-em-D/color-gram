@@ -13,8 +13,8 @@
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
            <div id = "rec3">
                <p id= "user">
-                <%= f.label :username, 'Username' %>:
-                <%= f.text_field :username, autofocus: true, autocomplete: "username" , class: "usna" %><br>
+                <%= f.label :email, 'email' %>:
+                <%= f.text_field :email, autofocus: true, autocomplete: "email" , class: "usna" %><br>
               
             
                 <%= f.label :password %>:

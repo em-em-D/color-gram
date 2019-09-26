@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# :nodoc:
 # Load the Rails application.
 require_relative 'application'
 

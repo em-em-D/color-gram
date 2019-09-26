@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
+# :nodoc:
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :sign_post, expect: %i[new index]
+
   def new
     @post = Post.new
   end
@@ -9,9 +13,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def show
-    @post = Post.find_by(params[:id])
-  end
+  def show; end
 
   def create
     @post = current_user.post.build(permit_post)
@@ -25,9 +27,12 @@ class PostsController < ApplicationController
   end
 
   private
-  
+
   def permit_post
     params.require(:post).permit(:description)
   end
-    
+
+  def sign_post
+    @post = Post.find_by(params[:id])
+  end
 end
