@@ -13,7 +13,7 @@
       <% @posts.each do |post| %><br>
         <div id = "post-box">
               <span class = "cont">
-                <p > <strong>Author:</strong>    <%= current_user.username %><br></p>
+                <p > <strong>Author:</strong> <%= post.user.username %><br></p>
                 <p ><strong> Posted: </strong><%= post.description %></p>
                 <p>(<%= time_ago_in_words(post.created_at) %> ago.)</p>
                 </span>
