@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <%= yield %>
-
     <% flash.each do |a, b| %>
       <div class= 'alert alert-success'> <%= b %> </div>
     <% end %>
+    
+    <%= yield %>
   </body>
 </html>
