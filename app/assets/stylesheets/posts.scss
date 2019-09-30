@@ -1,0 +1,127 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#flow{
+    font-family: 'Rock Salt', cursive;
+    position: center;
+ }
+
+ .bd-example-container-body {
+   height: 38rem;
+   background: linear-gradient(to left, #614375 5%, #614385 15%, #614375 33%, #516381 66%, #516388 66%,  #516395 100%);
+   border-radius: .25rem;
+   font-family: 'Rock Salt', cursive;
+   width: 100%;
+  }
+
+ .btn-btn-primary{
+    position: absolute;
+    width: 95px !important;
+    height: 60px !important;
+    left: 100px !important;
+    top: 200px !important;
+    background: rgba(6, 241, 100, 0.81) !important;
+    border-radius: 69.5px !important;
+    color: #F8F3F3;
+ }
+
+ #post-box{
+   position: relative;
+   width: 465.55px;
+   left: 190px;
+   top: 100px;
+   background-color: #516381;
+   border-radius: 13px;
+   font-family: 'Rock Salt', cursive;
+  
+ }
+
+ .cont{
+   color: #F8F3F3;
+   font-size: 15px;
+ }
+
+ .text{
+   position: absolute;
+   width: 253.28px;
+   height: 146.61px;
+   left: 430.03px;
+   top: 16px;
+   background: rgba(14, 0, 21, 0.12);
+   border-radius: 66px;
+   transform: rotate(0.79deg);
+ }
+
+ .butn{
+    background: #516381;
+    color: white;
+    font-size: 15px;
+ }
+ .postbutton{
+   position: absolute;
+   width: 112px;
+   height: 48px;
+   left: 680px;
+   top: 46px;
+   background: #1B0329;
+   border-radius: 137.5px;
+   color: #F8F3F3;
+ }
+.postdex{
+  background: white ;
+  color: #516395;
+}
+
+.navbar {
+   overflow: hidden;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   top:9.6rem;
+   background-color:rgba(68, 181, 226, 0.12);
+   opacity: 40%;
+}
+
+.navbar a {
+   color: #F8F3F3;
+   bottom: 0px;
+   font-size: 12px;
+}
+
+.navbar a:hover {
+   background: linear-gradient(to left, #614375 5%, #614385 10%, #614375 33%, #516381 66%, #516388 66%,  #516395 100%);
+   color: whitesmoke;
+ }
+ 
+ .links{
+   color: #FFDF00;
+   float: right;
+   font-size: 25px;
+ }
+
+ .lu{
+   color: white;
+   left: 10px;
+ }
+ ul li {
+    list-style-type: none;
+    left:600px;
+ }
+
+#profile{
+   left: 400px;
+}
+
+.btn-btn-sec{
+    position: absolute;
+    width: 205px !important;
+    height: 20px !important;
+    left: 510px !important;
+    top: 390px !important;
+    background: #516395 !important;
+    border-radius: 69.5px !important;
+    color: #F8F3F3;
+    font-size: 8px;
+}
+

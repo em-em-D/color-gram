@@ -1,0 +1,27 @@
+// Place all the styles related to the images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.p-shape {
+    width: 276px;
+    height: 200px;
+    border-radius: 700px;
+    top: 25px;
+  }
+#img{
+  left:420px;
+  top: 4.5rem;
+  position: relative;
+}
+
+.images{
+  top: 450px;
+}
+
+.check {
+  display:table;
+  border-spacing:10px 5px ;
+}
+.check li{
+  display:table-cell;
+}

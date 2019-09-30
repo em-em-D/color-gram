@@ -1,0 +1,12 @@
+<div id = "flow">
+    <div class="container" >
+      <div class="row">
+        
+        <div class="col-sm-1">
+          <%= form_for @post do |p| %>
+          <%= p.text_field :description , class: "text" %>
+          <%= p.submit "publish post", class: "postbutton"%>
+          <% end %>
+        </div>
+      </div>
+    </div>

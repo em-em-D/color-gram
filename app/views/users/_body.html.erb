@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="outlay">
+        <%= form_for @user, html: { multipart: true } do |f| %>
+            <%= f.label :avatar %><br>
+            <%= f.file_field :avatar%><br>
+            <%= f.button 'upload photo' %>
+        <% end %>
+    </div>
+</body>
+</html>
