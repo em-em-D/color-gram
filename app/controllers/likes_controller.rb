@@ -19,8 +19,8 @@ class LikesController < ApplicationController
       flash[:notice] = 'no unlikes allowed on this platform'
     else
       @like.destroy
+      redirect_to posts_path
     end
-    redirect_to posts_path
   end
 
   private
@@ -30,7 +30,7 @@ class LikesController < ApplicationController
   end
 
   def already_liked?
-    Like.where(user_id: current_user.id, post_id: params[:post_id]).exists?
+    Like.find_by(user_id: current_user.id, post_id: params[:post_id])
   end
 
   def find_like
