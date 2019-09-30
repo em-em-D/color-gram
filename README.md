@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# WELCOME TO COLOR-GRAM !!
 
-Things you may want to cover:
+# NOTICE
+ This is only designed for happy and cheerful people, if you have a bad habit of giving unneccessary review on others code. # stay away!
 
-* Ruby version
+# TO GET STARTED
 
-* System dependencies
+This project is an immetation of facebook/instagram from the odin_project exercise and microverse
 
-* Configuration
+# Pre-requisite
+(1) Rails 5.2.3 >
 
-* Database creation
+installed on your local machine
 
-* Database initialization
+(2) clone and download this repository to your local machine
 
-* How to run the test suite
+(3) run bundle update to ensure all gems are uptill date
 
-* Services (job queues, cache servers, search engines, etc.)
+(4) run ( rails s ) to start your server and run (localhost:3000) on your browser to start the application
 
-* Deployment instructions
+#About color-gram
 
-* ...
+color-gram is a platform to share your daily thought with your friends, explore their happy moments in their photos sections and (coming soon => listen to music while you surf the post feed)
+
+# Author: Michael Damulak
+# github: github.com/em-em-D/color-gram
+
+happy surfing!!

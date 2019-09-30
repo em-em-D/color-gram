@@ -1,0 +1,109 @@
+#sign{
+    width: 1285px;
+    height: 812px;
+    position: relative;
+    background: rgba(27, 3, 41, 0.86);
+    opacity: 50%;
+    font-family: 'Rock Salt', cursive;
+}
+
+.butt-on {
+    background: rgb(72, 255, 0); 
+    color: white;
+    margin-top: 0px;
+    top: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(247, 245, 245);
+ }
+
+ #actions{
+     left:100px;
+ }
+
+
+#field{
+    position: absolute;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    left: 400px;
+    top: 250px;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgb(36, 218, 142);
+}
+
+#pH{
+    position: absolute;
+    width: 43px;
+    height: 65px;
+    left: 600px;
+    top: 550px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    color: #F45F0B;
+}
+
+#pS{
+    position: absolute;
+    width: 57px;
+    height: 65px;
+    left: 550px;
+    top: 85px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    color: #0ED9B4;
+    backdrop-filter: blur(4px);
+}
+
+#pU{
+    position: absolute;
+    width: 44px;
+    height: 40px;
+    left: 800px;
+    top: 66px;
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 115px;
+    /* identical to box height */
+    color: #EEF20F;
+    transform: rotate(10.72deg);
+}
+
+.usna{
+    position: absolute;
+    width: 190px;
+    height: 38px;
+    left: 200px;
+    top: 5px;
+    background: #FFFFFF;
+    border-radius: 103px;
+}
+
+.pass{
+    position: absolute;
+    width: 190px;
+    height: 38px;
+    left: 200px;
+    top: 55px;
+    background: #FFFFFF;
+    border-radius: 103px;
+}
+
+#edit{
+    position: relative;
+    left: 500px;
+    font-family: 'Rock Salt', cursive;
+    background-color: white;
+    color:  #516381;
+    top: 25px;
+    font-size: 15px;
+}

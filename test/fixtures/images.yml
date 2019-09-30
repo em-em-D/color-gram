@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+# :nodoc:
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+
+two:
+  user: two

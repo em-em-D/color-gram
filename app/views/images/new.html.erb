@@ -1,0 +1,36 @@
+<h2> upload Image </h2>
+
+<div class = "row">
+    <div class = "col-md-6 offset-md-3">
+     <%= form_for @image do |f| %>
+        <div class= "form-group">
+            <%= f.label :image %>
+            <%= f.drag_and_drop_file_field :image, "drag and drop your photo here" %>
+        <%= f.submit "upload photo", class: 'btn btn-primary'%>
+        </div>
+     <% end %>
+</div>
+
+<script>
+    (function () {
+        var reader = new FileReader()
+        var form = document.querySelector('#new_image')
+        var field = document.querySelector('#image_image')
+        var preview = document.querySelector('#asdndz-image_image')
+
+        reader.onload = function(e){
+            preview.style.backgroundImage = 'url(${e.srcElement.result})'
+        }
+
+        field.addEventListener('dnd-upload:initialize',function(e) {
+            reader.readAsDataURL(e.detail.file)
+        },false)
+
+        form.addEventListener('click', function(e){
+            if (event.target. dataset.dndDelete === 'true'){
+                preview.style.backgroundImage = ''
+            }
+        }, true)
+        
+    })()
+</script>
