@@ -7,7 +7,7 @@
 
 # TO GET STARTED
 
-This project is an immetation of facebook/instagram from the odin_project exercise and microverse
+This project is an imitation of facebook from the odin_project exercise and microverse
 
 # Pre-requisite
 (1) Rails 5.2.3 >
