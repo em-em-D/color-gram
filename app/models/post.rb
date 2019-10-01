@@ -6,5 +6,5 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   default_scope { order(created_at: :desc) }
   validates :description, presence: true
-  has_many :comments
+  has_many :comments, dependent: :destroy
 end
