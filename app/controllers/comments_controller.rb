@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
   def index
     @comments = @post.comments.order(created_at: :desc)
   end
+
   def create
     @comment = Comment.new(permit_comment)
     @comment.post_id = params[:post_id]
