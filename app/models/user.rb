@@ -2,7 +2,7 @@
 
 # :nodoc:
 class User < ApplicationRecord
-  has_many :post
+  has_many :posts
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
   devise :database_authenticatable, :registerable,
