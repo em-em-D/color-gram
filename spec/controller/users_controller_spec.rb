@@ -9,15 +9,15 @@ RSpec.describe UsersController, type: :controller do
       @request.env['devise.mapping'] = Devise.mappings[:user]
     end
 
-    it 'It should not render :show when user in not logged in' do
-      get :show, params: { id: michael.id }
-      expect(response).to_not render_template(:show)
+    it 'It should not render registration when user in not signed_up in' do
+      get :new_user_registration
+      expect(response).to_not render_template(:new_user_registration)
     end
 
-    it 'Renders :show when a user is logged in' do
+    it 'Renders :new when a user is logged in' do
       sign_in michael
-      get :show, params: { id: michael.id }
-      expect(response).to render_template(:show)
+      get :new, params: { id: michael.id }
+      expect(response).to render_template(:new)
     end
   end
 
@@ -26,14 +26,14 @@ RSpec.describe UsersController, type: :controller do
       sign_in michael
     end
 
-    it 'Successfully sends a get request to user#index route' do
-      get :index
+    it 'Successfully sends a get request to user#edit route' do
+      get :edit_user_registration
       expect(response.status).to eql(200)
     end
 
-    it 'Renders user index page if user is signed in' do
-      get :index
-      expect(response).to render_template(:index)
+    it 'Renders user login page in new session' do
+      get :new_user_session
+      expect(response).to render_template(:new_user_session)
     end
   end
 end

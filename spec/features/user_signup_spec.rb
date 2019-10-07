@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-
+require 'capybara'
 RSpec.feature 'UserSignups', type: :feature do
   let(:michael) { FactoryBot.build(:user) }
 

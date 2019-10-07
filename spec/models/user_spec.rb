@@ -14,9 +14,9 @@ RSpec.describe User, type: :model do
     end
 
     it 'name should be present' do
-      luna.user_name = ''
+      luna.username = ''
       assert !luna.valid?
-      luna.user_name = 'Luna'
+      luna.username = 'Luna'
       assert luna.valid?
     end
 

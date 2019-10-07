@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :post do
-    content { Faker::Games::WorldOfWarcraft.quote }
-    association :creator, factory: :user
+    description { Faker::Games::WorldOfWarcraft.quote }
+    association :user, factory: :user
   end
 end

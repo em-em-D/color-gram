@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   let(:luna) { FactoryBot.create(:user) }
-  let(:post1) { FactoryBot.create(:post, creator_id: luna.id) }
+  let(:post1) { FactoryBot.create(:post, user_id: luna.id) }
   let(:comment1) { FactoryBot.build(:comment, user_id: luna.id, post_id: post1.id) }
 
   describe 'General Comment attributes validations' do

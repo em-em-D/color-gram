@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes
   end
-
+  resources :users
   devise_for :users
   root to: 'posts#new'
   get '/upload', to: 'images#new'
