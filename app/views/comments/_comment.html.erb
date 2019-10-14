@@ -1,0 +1,4 @@
+<div id = "comcol">
+    <%= comment.body %><br>
+    <p>(<%= time_ago_in_words(comment.created_at || Time.now) %> ago.)</p>
+ </div>

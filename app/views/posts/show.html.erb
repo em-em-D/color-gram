@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% unless @posts.empty? %>
   <% @posts.each do |post| %>
         <p> <strong>Author:</strong><%= current_user.username %><br></p>
@@ -7,3 +8,22 @@
 
 <% end %>%>
     
+=======
+<%= render 'shared/header' %>
+
+<div id = "post-box">
+              <span class = "cont">
+                <p > <strong>Author:</strong> <%= @post.user.username %><br></p>
+                <p ><strong> Posted: </strong><%= @post.description %></p><br>
+                </span>
+                <p>(<%= time_ago_in_words(@post.created_at) %> ago.)</p>
+                <p><h3>Comments <%= @post.comments.count %></h2></p>
+                <p><%= render partial: 'comments/comment', collection: @post.comments.reverse %></p><br>
+                    <h3>Add a comment</h3>
+                  <p><%= render 'comments/form', post: @post %><p><br>
+                  <p><%= link_to "back to post", posts_path ,class: "postdex"%></p>
+</div>
+
+
+  
+>>>>>>> milestone4

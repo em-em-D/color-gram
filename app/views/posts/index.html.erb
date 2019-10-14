@@ -10,6 +10,7 @@
 
     <%= render 'shared/header'%> 
       <% unless @posts.empty? %>
+<<<<<<< HEAD
       <% @posts.each do |post| %><br>
         <div id = "post-box">
               <span class = "cont">
@@ -21,6 +22,33 @@
         <% end %>
        <% end %>
     
+=======
+      
+        <% @posts.each do |post| %><br>
+          <div id = "post-box">
+              <span class = "cont">
+                <p > <strong>Author:</strong> <%= post.user.username %><br></p>
+                <p ><strong> Posted: </strong><%= post.description %></p><br>
+                </span>
+                <p>(<%= time_ago_in_words(post.created_at) %> ago.)</p>
+                <div id= "comcol"><p><h3>Comments <%= post.comments.count %></h2></p></div>
+                <p><%= render partial: 'comments/comment', collection: post.comments.reverse %></p><br>
+                
+                    <div id = "comcol"><h3>Add a comment</h3></div>
+                  <p><%= render 'comments/form', post: post %><p><br>
+                  <div id = "comcol"><p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'like' : 'likes' %></p></div>
+            
+                      <p class= "pre-like"><%= pre_like = post.likes.find {|like| like.user_id == current_user.id} %> </p>
+                      <% if pre_like %>
+                        <%= button_to 'Unlike' , post_like_path(post, pre_like),class: 'btn-btn-secondary', method: :delete  %>
+                      <% else %>
+                        <%= button_to 'Like' , post_likes_path(post , pre_like), class: 'btn btn-primary' , method: :post %>
+                      <% end %><br>
+                  
+            </div>
+            <% end %>
+       <% end %>
+>>>>>>> milestone4
 
 </body>
 </html>

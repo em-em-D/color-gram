@@ -2,7 +2,14 @@
 
 # :nodoc:
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :posts
+=======
+  resources :posts do
+    resources :comments
+    resources :likes
+  end
+>>>>>>> milestone4
   devise_for :users
   root to: 'posts#new'
   get '/upload', to: 'images#new'

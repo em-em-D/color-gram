@@ -2,6 +2,7 @@
 
 # :nodoc:
 class User < ApplicationRecord
+<<<<<<< HEAD
   has_many :post
   has_many :friendships
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
@@ -37,4 +38,16 @@ class User < ApplicationRecord
   def friend?(user)
     friends.include?(user)
   end
+=======
+  has_many :posts
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  validates :username, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
+  has_many :images
+  has_one_attached :avatar
+>>>>>>> milestone4
 end
