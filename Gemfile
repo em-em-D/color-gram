@@ -24,6 +24,7 @@ gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
 gem 'gravatar_image_tag'
 >>>>>>> milestone4
 gem 'jbuilder', '~> 2.5'
+gem 'image_processing'
 gem 'mini_magick', '~> 4.8'
 gem 'paperclip', '~> 6.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
