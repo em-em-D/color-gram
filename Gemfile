@@ -16,8 +16,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+<<<<<<< HEAD
+gem 'gravatar_image_tag'
+gem 'image_processing'
+=======
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
 gem 'gravatar_image_tag'
+>>>>>>> milestone4
 gem 'jbuilder', '~> 2.5'
 gem 'image_processing'
 gem 'mini_magick', '~> 4.8'
@@ -46,10 +51,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to
   # stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+<<<<<<< HEAD
+=======
   gem 'capybara', '>= 2.2'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.8'
+>>>>>>> milestone4
 end
 
 group :development do
@@ -65,6 +73,10 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+<<<<<<< HEAD
+  gem 'capybara', '>= 2.15'
+=======
+>>>>>>> milestone4
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome

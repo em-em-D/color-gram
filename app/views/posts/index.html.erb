@@ -10,6 +10,19 @@
 
     <%= render 'shared/header'%> 
       <% unless @posts.empty? %>
+<<<<<<< HEAD
+      <% @posts.each do |post| %><br>
+        <div id = "post-box">
+              <span class = "cont">
+                <p > <strong>Author:</strong> <%= post.user.username %><br></p>
+                <p ><strong> Posted: </strong><%= post.description %></p>
+                <p>(<%= time_ago_in_words(post.created_at) %> ago.)</p>
+                </span>
+        </div>
+        <% end %>
+       <% end %>
+    
+=======
       
         <% @posts.each do |post| %><br>
           <div id = "post-box">
@@ -35,6 +48,7 @@
             </div>
             <% end %>
        <% end %>
+>>>>>>> milestone4
 
 </body>
 </html>
