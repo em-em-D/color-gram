@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
-  font-family: 'Rock Salt', cursive;font-family: 'Rock Saltfont-family: 'Rock Salt', cursive;', cursive;
+
   def index
     @posts = Post.all
   end
