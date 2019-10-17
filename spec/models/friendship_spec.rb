@@ -8,7 +8,7 @@ RSpec.describe Friendship, type: :model do
 
   describe 'General friendship attributes validations' do
     it 'should be valid' do
-      expect( friendship1.errors.full_messages).to eql([])
+      expect(friendship1.errors.full_messages).to eql([])
       assert friendship1.valid?
     end
 
