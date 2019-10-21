@@ -3,7 +3,8 @@
 # :nodoc:
 class User < ApplicationRecord
   has_many :post
-  has_many :friendships
+  has_many :friendships, dependent: :destroy
+  has_many :friends, through: :friendships
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
@@ -20,12 +21,12 @@ class User < ApplicationRecord
 
   # Users who have yet to confirm a friend request
   def pending_friends
-    friendships.map { |friendship| friendship.friend unless !friendship.confirmed }.compact
+    friendships.map { |friendship| friendship.friend if friendship.confirmed }.compact
   end
 
   # users who have requested to be friends
   def friend_requests
-    inverse_friendships.map { |friendship| friendship.user unless !friendship.confirmed }.compact
+    inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }.compact
   end
 
   def confirm_friend(user)
@@ -36,5 +37,9 @@ class User < ApplicationRecord
 
   def friend?(user)
     friends.include?(user)
+  end
+
+  def add_friend(user)
+    friends << user
   end
 end

@@ -20,20 +20,6 @@
       <%= link_to "upload-photo", edit_user_registration_path, class: "butn" %>
       <%= image_tag user_avatar(current_user, 200), class: "rounded-circle"%>
       </div> 
-<<<<<<< HEAD
-    
-           
-          <div class = "navbar">
-                  <%= link_to "photos", images_path %>
-                  <%= link_to "friens", "#"%>
-                  <%= link_to "posts", new_post_path %>
-                  <%= link_to "post-feed", posts_path %>
-                  <%= link_to "settings", edit_user_registration_path%>
-                  <%= link_to "notifications", "#" %>
-                
-          </div>
-
-=======
 
           <div class = "navbar">
             <%= link_to "photos", images_path %>
@@ -43,7 +29,6 @@
             <%= link_to "settings", edit_user_registration_path%>
             <%= link_to "notifications", "#" %>   
           </div>
->>>>>>> milestone4
      </div>
 
        <%= render 'shared/post' %>
