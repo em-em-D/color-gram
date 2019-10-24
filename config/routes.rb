@@ -11,10 +11,12 @@ Rails.application.routes.draw do
   get 'user', to: 'users#show'
   root to: 'posts#new'
   get '/upload', to: 'images#new'
-  post 'friendship', to: 'friendships#create'
-  post 'accept_friendship', to: 'friendships#update'
-  delete 'cancel_friendship', to: 'friendships#destroy'
-  get 'all_requests', to: 'friendships#show'
+
+  resources :friendships
+  delete '/delete_friend', to: 'friendships#destroy' 
+  delete '/cancel_friend', to: 'friendships#cancel'
+  delete '/reject_friend', to: 'friendships#reject'  
+  patch '/confirm_friend', to: 'friendships#confirm' 
   resources :images, only: %i[index show create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

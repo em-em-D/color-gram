@@ -1,1 +1,45 @@
-<%= image_tag @user.avatar.url(:medium) %>
+<div class="profile-cont">
+  <% if @user %>
+    <% provide(:title, @user.username) %>
+    <% provide(:title, @user.email) %>
+    <aside class="col-md-3">
+       <% if (current_user.id == @user.id) %>
+    <%= link_to "Edit info", edit_user_registration_path, class: "edit" %>
+  <% end %>
+    
+    </aside>
+    <div class="profile-posts">
+      <% @user_post.each do |post| %>
+          <%= link_to post.description, post_path(post)%><br>
+      <% end %>
+    </div>
+
+    <div class = "#">
+
+                 <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="h6 text-muted">Friends</div>
+                            <div class="h5"><%= @user.friends.count %></div>
+                        </li>
+                        <% if @user === current_user %>
+                            <li class="list-group-item">
+                                <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %>
+                            </li>
+
+                        <% elsif @user != current_user && !current_user.friend?(@user) %>
+                            <li class="list-group-item">
+                                <span class="field add-friend">
+                                    <%= link_to 'Add friend', friendship_path(:id => @user.id), method: :post, class: 'request-friend' %>
+                                </span>        
+                            </li>
+                        <% elsif current_user.friend?(@user) %>
+                            <li class="list-group-item">
+                            <%= link_to "Unfriend",  delete_friend_path(@user), method: :delete,  data: { confirm: "Are you sure you no longer want to be friends with this user ?"}, class: "btn btn-danger" %>
+            
+                                       
+                            </li>
+                        <% end %>
+                    </ul>
+    </div>
+  <% end %>
+</div>

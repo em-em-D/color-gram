@@ -1,0 +1,6 @@
+<div class = "requests-container">
+    <% if @friendships.any? %>
+        <div class = "word"> Current Request </div>
+        <%= render "request", friendships: @friendships %>
+    <% end %>
+</div>

@@ -3,35 +3,47 @@
 # :nodoc:
 class FriendshipsController < ApplicationController
   before_action :authenticate_user!
-
-  def create
-    friend = User.find_by_id(params[:id])
-    @friendship = current_user.friendships.build(friend_id: params[:id])
-    redirect_back(fallback_location: root_path) if @friendship.save
+  def index
+    @friends = Friends.all
   end
 
-  def update
-    user = User.find_by_id(params[:id])
-    if current_user.confirm_friend(user)
-      if requests.any?
-        redirect_back(fallback_location: root_path)
-      else
-        redirect_to root_path
-      end
+  def create
+    @friendship = current_user.friendships.build(friend_id: params[:id])
+    if @friendship.save
+      flash[:success] = 'Your friend request was sent successfully '
+    else
+      flash[:alert] = ' Sorry there was an error'
     end
+    redirect_back(fallback_location: root_path)
   end
 
   def destroy
-    if params[:id]
-      user = User.find_by_id(params[:id])
-    else
-      @friendship = current_user.inverse_friendships.find_by_id(params[:friend_id])
-    end
-    @friendship ||= user.inverse_pending_friendships.find { |friendship| friendship.user = current_user }
-    redirect_back(fallback_location: root_path) if @friendship.delete
+    @friend1 = Friendship.where(user_id: params[:format], friend_id: current_user.id)
+    @friend2 = Friendship.where(user_id: current_user.id, friend_id: params[:format])
+    @friend = @friend1.empty? ? @friend2 : @friend1
+    flash[:danger] = 'You are no longer friends' if @friend.delete_all
+    redirect_back(fallback_location: root_path)
   end
 
-  def show
-    @friendships = requests
+  def confirm
+    @user = User.find_by(id: params[:format])
+    friendship = Friendship.where(user: @user, friend: current_user)
+    friendship.update(confirmed: true)
+    flash[:success] = 'You are now friends'
+    redirect_back(fallback_location: root_path)
+  end
+
+  def reject
+    @user = User.find_by(id: params[:format])
+    current_user.reject_friends(@user)
+    flash[:success] = 'You rejected the friend request'
+    redirect_back(fallback_location: root_path)
+  end
+
+  def cancel
+    @user = User.find_by(id: params[:format])
+    current_user.friendships.find_by(friend_id: params[:id]).destroy
+    flash[:success] = 'Your friend request is cancelled'
+    redirect_back(fallback_location: root_path)
   end
 end

@@ -19,7 +19,7 @@
     width: 734px;
     height: 97px;
     left: 159px;
-    top: 80px;
+    top: 60px;
     background: rgba(27, 3, 41, 0.86);
     border-radius: 100px;
 }
@@ -49,6 +49,17 @@
     line-height: 57px;
     margin-top: 15px;
     background-color: #FFFFFF;
+    border-radius: 148px;
+    font-family: 'Rock Salt', cursive;
+}
+
+.but{
+    width: 100px;
+    height: 58px;
+    left: 200px;
+    line-height: 57px;
+    background-color: #1b0329;
+    color: #FFFFFF;
     border-radius: 148px;
     font-family: 'Rock Salt', cursive;
 }
