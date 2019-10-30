@@ -34,6 +34,7 @@ class User < ApplicationRecord
   end
 
   def friend_requests
+
     pending_inverse_friendships.map(&:user)
   end
 
