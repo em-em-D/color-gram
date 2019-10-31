@@ -7,6 +7,11 @@ class FriendshipsController < ApplicationController
     @friends = Friends.all
   end
 
+  def show
+    @friendships = requests
+    redirect_to root_path if @friendships.empty?
+  end
+
   def create
     @friendship = current_user.friendships.build(friend_id: params[:id])
     if @friendship.save
@@ -30,7 +35,7 @@ class FriendshipsController < ApplicationController
     friendship = Friendship.where(user: @user, friend: current_user)
     friendship.update(confirmed: true)
     flash[:success] = 'You are now friends'
-    redirect_back(fallback_location: root_path)
+    redirect_to users_path
   end
 
   def reject

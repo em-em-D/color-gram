@@ -14,11 +14,11 @@
         <div id = "namz">:<%= user.username %></div>
            <div class = "butz"> 
                 <% if current_user.friend(@user) %>
-                    <%= link_to 'unfriend', delete_friend_path(:id => @user.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <%= link_to 'unfriend', delete_friend_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %>
                 <% elsif current_user.sent_request? @user %>
                     <%= link_to 'cancel request', cancel_friend_path(:id => @user.id), method: :delete, class: 'cancel-friend' %>
                 <% elsif current_user.friend_requests.include?(@user) %>
-                    <%= link_to 'Accept', confirm_friend_path(:id => @user.id), method: :patch %>
+                    <%= link_to 'Accept', confirm_friend_path(@user), method: :patch %>
                 <% else %>
                     <span class="field add-friend">
                         <%= link_to 'Add friend', friendships_path(:id => @user.id), method: :post %>

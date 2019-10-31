@@ -28,7 +28,12 @@
                   <%= link_to "posts", new_post_path %>
                   <%= link_to "post-feed", posts_path %>
                   <%= link_to "settings", edit_user_registration_path%>
-                
+                  <% if user_signed_in? %>
+                    <% if current_user.friend_requests.count > 0 %>
+                       <%= link_to ('<i class="fa fa-bell" style="color: yellow" aria-hidden="true"></i>').html_safe, users_path, class: "bell" %>
+                        <div id="notification">(<%=  current_user.friend_requests.count %>)</div> 
+                    <% end%>    
+                <% end %>
           </div>
 
      </div>
