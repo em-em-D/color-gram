@@ -5,19 +5,10 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:michael) { FactoryBot.build(:user) }
   let(:luna) { FactoryBot.build(:user) }
-  valid_emails = ['damulak@gmail.com', 'sam@example.com', 'vez@yahoo.ke', 'luna@example.com']
-  invalid_emails = ['vim.com', 'hello@hiiscom', 'samplegmailcom']
 
   describe 'General user attributes validations' do
     it 'should be valid' do
       assert michael.valid?
-    end
-
-    it 'name should be present' do
-      luna.username = ''
-      assert !luna.valid?
-      luna.username = 'Luna'
-      assert luna.valid?
     end
 
     it 'Email should be present' do
@@ -27,17 +18,6 @@ RSpec.describe User, type: :model do
       assert michael.valid?
     end
 
-    it 'Email format should be valid' do
-      valid_emails.each do |email|
-        michael.email = email
-        assert michael.valid?
-      end
-      invalid_emails.each do |email|
-        michael.email = email
-        assert !michael.valid?
-        expect(michael.errors.full_messages[0]).to eql('Email is invalid')
-      end
-    end
     it 'Email should be downcase' do
       luna.email = 'LUNA@example.org'
       luna.save!
