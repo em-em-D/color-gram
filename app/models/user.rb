@@ -21,6 +21,7 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  devise :omniauthable, omniauth_providers: %i[facebook]
   validates :email, presence: true
   validates :password, presence: true
   has_many :images
@@ -59,5 +60,14 @@ class User < ApplicationRecord
 
   def timeline_posts
     confirmed_friends_posts + conirmed_inverse_friends_posts + posts
+  end
+
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = devise.friendly_token[0,20]
+      user.name = auth.info.name
+      user.image = auth.info.image
+    end
   end
 end
