@@ -5,11 +5,10 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   # before_action :sign_post, expect: %i[new index]
 
-  def new;end
+  def new; end
 
-  def index;end
+  def index; end
 
- 
   def create
     @post = current_user.posts.build(permit_post)
     if @post.save
