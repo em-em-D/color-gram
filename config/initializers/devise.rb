@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "omniauth-facebook"
 # :nodoc:
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
@@ -155,7 +156,6 @@ Devise.setup do |config|
 
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
-  config.omniauth :facebook, 'APP_ID', 'APP_SECRET', token_params: { parse: :json }
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
 
@@ -259,6 +259,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :facebook, "3038644956209663", "c2c25d92d0c992a9206c2ea088de85c1", callback_url: "http://localhost:3000/users/auth/facebook/callback"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

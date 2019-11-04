@@ -7,7 +7,7 @@
  <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
 <div id = "login">
-    <body>
+<body>
     <%= render "devise/shared/error_messages", resource: resource %>
       <p id ="p1">c</p><p id= "p2">o</p><p id= "p3">l</p><p id="p4">0</p><p id="p5">r</p>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -33,7 +33,6 @@
 
             <div class = "actions">
               <%= f.submit "Log in", class: "login-button" %>
-              <%= link_to "facebook", user_facebook_omniauth_authorize_path, class: "face-but"%>
             </div>
          <% end %>
   
