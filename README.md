@@ -2,8 +2,9 @@
 
 # WELCOME TO COLOR-GRAM !!
 
-# NOTICE
- This is only designed for happy and cheerful people, if you have a bad habit of giving unneccessary review on others code. # stay away!
+# LIVE LINK
+
+ CLICK ON THE LINK TO EXPERSIENCE COLOR-GRAM GRAM LIVE  https://color-gram.herokuapp.com/users/sign_in
 
 # TO GET STARTED
 
