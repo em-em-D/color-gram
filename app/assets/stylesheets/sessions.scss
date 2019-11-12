@@ -20,13 +20,24 @@
     position: absolute;
     width: 95px;
     height: 100px;
-    left: 600px;
+    left: 520px;
     top: 405px;
     background: rgba(6, 241, 100, 0.81);
     border-radius: 89.5px;
     color: #F8F3F3;
    }
-
+.face-but{
+   position: absolute;
+   width: 99px;
+   height: 95px;
+   left: 692px;
+   top: 405px;
+   border-radius: 89.5px;
+   background: linear-gradient(to right, #2310d3bd 100%, #0e5dd3 20%, #2d59ec 10%);
+   color: #F8F3F3;
+   line-height: 87px;
+   font-size: 12px;
+   }
    .button {
       background: red; 
       color: white;
