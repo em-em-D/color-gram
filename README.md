@@ -4,7 +4,7 @@
 
 # LIVE LINK
 
- CLICK ON THE LINK TO EXPERSIENCE COLOR-GRAM GRAM LIVE  https://color-gram.herokuapp.com/users/sign_in
+ CLICK ON THE LINK TO EXPERSIENCE COLOR-GRAM GRAM LIVE ON HEROKU  https://color-gram.herokuapp.com/users/sign_in
 
 # TO GET STARTED
 
