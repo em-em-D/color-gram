@@ -18,10 +18,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
 gem 'gravatar_image_tag'
-<<<<<<< HEAD
-gem 'image_processing'
-=======
->>>>>>> development
 gem 'jbuilder', '~> 2.5'
 gem 'mini_magick', '~> 4.8'
 gem 'omniauth-facebook'

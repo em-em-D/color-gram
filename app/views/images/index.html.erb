@@ -1,0 +1,13 @@
+<%= render 'shared/header' %>
+
+<p id = "center"><%= link_to "upload-photo", upload_path, class: 'btn btn-btn-sec' %></p><br>
+
+
+    <div class="container" >
+        <div class="row">        
+                <div class= ".col-md-4">
+                   <%= render 'shared/images', image: @images, class: "images" %>
+                </div>
+                
+            </div>
+    </div>
