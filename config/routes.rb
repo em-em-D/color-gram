@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes
   end
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users
   get 'users', to: 'users#index'
   get 'user', to: 'users#show'
   root to: 'posts#new'
