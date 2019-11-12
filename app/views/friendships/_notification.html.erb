@@ -1,0 +1,6 @@
+<% @friendship = friendship %>
+<% if @friendship %>
+    <div class="friend">
+      <p><%= @friendship.user.username %> Sent you a friend request</p>
+    </div><br>
+<% end %>

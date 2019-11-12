@@ -5,8 +5,14 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @user = User.all
+    @users = User.where('id != ?', current_user.id)
+    @friendship = current_user.friendships.build
   end
 
-  def show; end
+  def show
+    @user = User.find(params[:id])
+    @user_post = @user.posts
+    @images = @user.images.order(created_at: :desc)
+    @friendship = current_user.friendships.build
+  end
 end

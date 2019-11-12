@@ -3,11 +3,19 @@
 # :nodoc:
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  # before_action :sign_post, expect: %i[new index]
+  def new
+    @post = Post.new
+  end
 
-  def new; end
+  def index
+    @posts = Post.all
+  end
 
-  def index; end
+  def show
+    @post = Post.find(params[:id])
+    @comment = @post.comments.new
+    @comment.post_id = @post.id
+  end
 
   def create
     @post = current_user.posts.build(permit_post)

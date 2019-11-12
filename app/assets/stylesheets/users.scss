@@ -1,0 +1,65 @@
+#pymk{
+    position: absolute;
+    width: 960px;
+    height: 66px;
+    left: 69px;
+    background: rgba(27, 3, 41, 0.24);
+    border-radius: 100px;
+}
+.word{
+    position: absolute;
+    left: 320px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 28px;
+    align-items: center;
+    color: rgba(27, 3, 41, 0.86);
+}
+#friend{
+    position: relative;
+    width: 734px;
+    height: 97px;
+    left: 159px;
+    top: 60px;
+    background: rgba(27, 3, 41, 0.86);
+    border-radius: 100px;
+}
+.pix{
+    position: absolute;
+    width: 81px;
+    height: 93px;
+    left: 19px;
+    border-radius: 250px;
+}
+
+#namz{
+    position: absolute;
+    left: 280px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 28px;
+    align-items: center;
+    color: #FFFFFF;
+    line-height: 77px;
+}
+
+.butz{
+    position: absolute;
+    width: 100px;
+    height: 58px;
+    left: 620px;
+    line-height: 57px;
+    margin-top: 15px;
+    background-color: #FFFFFF;
+    border-radius: 148px;
+    font-family: 'Rock Salt', cursive;
+}
+
+.but{
+    width: 100px;
+    height: 58px;
+    left: 200px;
+    line-height: 57px;
+    background-color: #1b0329;
+    color: #FFFFFF;
+    border-radius: 148px;
+    font-family: 'Rock Salt', cursive;
+}

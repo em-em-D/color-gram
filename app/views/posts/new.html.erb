@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -20,30 +21,20 @@
       <%= link_to "upload-photo", edit_user_registration_path, class: "butn" %>
       <%= image_tag user_avatar(current_user, 200), class: "rounded-circle"%>
       </div> 
-<<<<<<< HEAD
-    
-           
-          <div class = "navbar">
-                  <%= link_to "photos", images_path %>
-                  <%= link_to "friens", "#"%>
-                  <%= link_to "posts", new_post_path %>
-                  <%= link_to "post-feed", posts_path %>
-                  <%= link_to "settings", edit_user_registration_path%>
-                  <%= link_to "notifications", "#" %>
-                
-          </div>
-
-=======
 
           <div class = "navbar">
             <%= link_to "photos", images_path %>
-            <%= link_to "friens", "#"%>
+            <%= link_to "friends", users_path %>
             <%= link_to "posts", new_post_path %>
             <%= link_to "post-feed", posts_path %>
             <%= link_to "settings", edit_user_registration_path%>
-            <%= link_to "notifications", "#" %>   
+            <% if user_signed_in? %>
+                    <% if current_user.friend_requests.count > 0 %>
+                       <%= link_to ('<i class="fa fa-bell" style="color: yellow" aria-hidden="true"></i>').html_safe, users_path, class: "bell" %>
+                        <div id="notification">(<%=  current_user.friend_requests.count %>)</div> 
+                    <% end%>    
+            <% end %>
           </div>
->>>>>>> milestone4
      </div>
 
        <%= render 'shared/post' %>

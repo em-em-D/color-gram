@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_in, keys: %i[username password])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[username email password current_password avatar])
   end
+
+  def requests
+    current_user.pending_inverse_friendships.order(:created_at)
+  end
 end
